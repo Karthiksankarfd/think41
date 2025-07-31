@@ -1,0 +1,39 @@
+# ------------------------
+# Node.js (for server/)
+# ------------------------
+server/node_modules/
+server/.env
+server/.DS_Store
+server/dist/
+server/build/
+server/coverage/
+server/logs/
+server/npm-debug.log*
+
+# If using TypeScript in server
+server/**/*.tsbuildinfo
+
+# ------------------------
+# React or Next.js (for my-app/)
+# ------------------------
+my-app/node_modules/
+my-app/.env.local
+my-app/.env.development
+my-app/.env.production
+my-app/.next/
+my-app/out/
+my-app/build/
+my-app/.DS_Store
+my-app/coverage/
+my-app/.turbo/
+my-app/.eslintcache
+
+# ------------------------
+# OS / IDE
+# ------------------------
+*.log
+.DS_Store
+Thumbs.db
+
+# vscode settings
+.vscode/
