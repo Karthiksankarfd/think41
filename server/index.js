@@ -1,14 +1,17 @@
-const express = require("express")
-const app = express()
-const loadcsv =  require("./dataassets/importCSV")
+const express = require("express");
+const app = express();
+const connectDB = require("./db-config/dbconnection")
+const loadcsv = require("./dataassets/importCSV");
+// loadcsv(); // Uncomment to import CSV once
 
-loadcsv()
+connectDB()
 
-app.get("/" , (req, res)=>{
-    res.write("Hello")
-    console.log("Hello world")
-} )
 
-app.listen(5000 , ()=>{
-   console.log("server is running on 3000")
-})
+const getProductRoutes = require("./routes/getProductRoute"); 
+
+// Middleware to handle product routes
+app.use("/api/products", getProductRoutes); 
+
+app.listen(5000, () => {
+  console.log("Server is running on port 5000"); 
+});
