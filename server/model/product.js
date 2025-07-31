@@ -1,6 +1,7 @@
 const mongoose = require("mongoose")
 
 const Product = mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     id:{type:Number} ,
     cost:{type:Number } ,
     category:{type:String } ,
