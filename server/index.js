@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const connectDB = require("./db-config/dbconnection")
 const loadcsv = require("./dataassets/importCSV");
+const cors = require('cors')
+app.use(cors())
 
 // loadcsv(); // Uncomment to import CSV once
 
